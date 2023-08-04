@@ -189,8 +189,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Gibt das Passwort für eine bestimmte E-mail addresse zurück. Bei dieser Methode hat ChatGPT mir geholfen. Meinen Ursprünglichen
-     * ansatz ist in der getPWforUserAlt methode zu finden.
+     * Gibt das Passwort für eine bestimmte E-mail addresse zurück.
      * @param eMail
      * @return String Passwort
      */
@@ -230,25 +229,6 @@ public class MainActivity extends AppCompatActivity {
         return userId;
     }
 
-    private String getPWforUserAlt(String eMail){
-        String[] nameAlsArray = { "name" };
-        Cursor cursor = DBDataSource.database.query( "User" ,nameAlsArray , "name" + "='" + eMail + "'", null, null, null, null);
-        if(cursor.moveToFirst()){
-            Log.d("MoveToFirst succesfull", "Hat geklappt");
-        }
-        String password = "";
-        if (cursor.moveToFirst()) {
-            int pwIndex = cursor.getColumnIndex("passwort");
-            if (pwIndex != -1) {
-                password = cursor.getString(pwIndex);
-                Log.d("PasswordInMethode", "Database password: " + password);
-            }else {
-                Log.d("pwIndex=-1", "pwIndex scheit -1 zu sein");
-            }
-        }
 
-        cursor.close();
-        return password;
-    }
 
 }
