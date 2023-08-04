@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/gewichtText"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:textSize="25sp"
+            android:text="Gewicht:" />
+
+        <EditText
+            android:id="@+id/gewichtTextEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:ems="2"
+            android:layout_toEndOf="@+id/gewichtText"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/wiederholungenText"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/gewichtTextEdit"
+            android:textSize="25sp"
+            android:text="Wdh.:" />
+
+        <EditText
+            android:id="@+id/wiederholungTextEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:ems="2"
+            android:layout_toEndOf="@+id/wiederholungenText"
+            android:inputType="number" />
+
+        <CheckBox
+            android:id="@+id/SatzGeschaftCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/wiederholungTextEdit"
+            android:text="Done" />
+    </RelativeLayout>
+
+</LinearLayout>

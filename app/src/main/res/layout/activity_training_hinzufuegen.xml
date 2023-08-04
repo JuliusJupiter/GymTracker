@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingHinzufuegenActivity">
+
+
+    <TextView
+        android:id="@+id/bezeichnungText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:text="Trainingsbezeichnung" />
+
+    <EditText
+        android:id="@+id/trainingsbezeichnungTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bezeichnungText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Name" />
+
+    <TextView
+        android:id="@+id/UbungText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/trainingsbezeichnungTextEdit"
+        android:text="Uebung auswaehlen" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiCompleteTextUebungen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/UbungText"
+        android:hint="Name der Uebung" />
+
+    <TextView
+        android:id="@+id/GewichtTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/multiCompleteTextUebungen"
+        android:text="Start Gewicht:" />
+
+    <EditText
+        android:id="@+id/editTextStartGewicht"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:layout_below="@+id/GewichtTextView"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/wdhTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/editTextStartGewicht"
+        android:text="Angestrebte Wdh.:" />
+
+    <EditText
+        android:id="@+id/editTextAngestrebteWdh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:layout_below="@+id/wdhTextView"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/SatzAnzahlText"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/editTextAngestrebteWdh"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saetze:" />
+
+    <Button
+        android:id="@+id/buttonWeniger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toStartOf="@+id/SatzAnzahlAnzeige"
+        android:layout_below="@+id/editTextAngestrebteWdh"
+        android:text="-" />
+
+
+    <TextView
+        android:id="@+id/SatzAnzahlAnzeige"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextAngestrebteWdh"
+        android:ems="2"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/buttonMehr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/SatzAnzahlAnzeige"
+        android:layout_below="@id/editTextAngestrebteWdh"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/UebungHinzufuegenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:layout_above="@+id/speichernButton"
+        android:text="Hinzufuegen" />
+
+    <Button
+        android:id="@+id/speichernButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="Speichern" />
+</RelativeLayout>
